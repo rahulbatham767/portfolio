@@ -2,7 +2,7 @@
 
 Welcome to the personal portfolio repository of **Rahul Batham** — Full-Stack Developer & Blockchain Engineer based in Gwalior, India.
 
-🚀 **Live Demo:** [ipodify.tech](https://ipodify.tech)
+🚀 **Live Demo:** [rahul-batham-portfolio.vercel.app](https://rahul-batham-portfolio.vercel.app/)
 
 ---
 
@@ -105,5 +105,5 @@ vcard-personal-portfolio/
 
 - **Name:** Rahul Batham
 - **Location:** Gwalior, India 🇮🇳
-- **Portfolio:** [ipodify.tech](https://ipodify.tech)
+- **Portfolio:** [rahul-batham-portfolio.vercel.app](https://rahul-batham-portfolio.vercel.app/)
 - **LinkedIn:** [linkedin.com/in/rahul-batham767](https://linkedin.com/in/rahul-batham767)

@@ -321,7 +321,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 480px; }
 
 .sidebar-info {
   position: relative;
@@ -422,9 +422,23 @@ main {
   margin-bottom: 2px;
 }
 
+.contact-item .icon-box { flex-shrink: 0; }
+
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  transition: color var(--transition-1);
+}
+
+.contact-info .contact-link[href^="mailto:"],
+.contact-info .contact-link[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.contact-info .contact-link:hover {
+  color: var(--orange-yellow-crayola);
 }
 
 .contact-info address { font-style: normal; }
@@ -1336,7 +1350,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 640px; }
 
   .sidebar-info { gap: 25px; }
 
@@ -1812,7 +1826,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    max-width: 1200px;
+    max-width: 1360px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -1821,8 +1835,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .main-content {
-    min-width: 75%;
-    width: 75%;
+    min-width: 0;
+    flex: 1;
+    width: auto;
     margin: 0;
   }
 
@@ -1839,7 +1854,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     height: 100%;
     margin-bottom: 0;
     padding-top: 60px;
+    padding-inline: 24px;
     z-index: 1;
+    width: 350px;
+    min-width: 350px;
+    flex-shrink: 0;
   }
 
   .sidebar-info { flex-direction: column; }
@@ -1863,9 +1882,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { grid-template-columns: 1fr; }
 
   .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
   }
 
   .contact-info :is(.contact-link, time, address) {

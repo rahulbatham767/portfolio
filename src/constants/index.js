@@ -4,13 +4,14 @@ export const personalInfo = {
   location: "Gwalior, India 🇮🇳",
   email: "rahulbatham767@gmail.com",
   phone: "+91 7999754170",
-  portfolio: "https://ipodify.tech",
+  portfolio: "https://rahul-batham-portfolio.vercel.app/",
   linkedin: "https://linkedin.com/in/rahul-batham767",
   github: "https://github.com/rahulbatham767",
   avatar: "/images/my-avatar.png",
   about: [
-    "Hi, I'm <strong>Rahul Batham</strong> 👋 — A Full-Stack Developer & Blockchain Engineer from <strong>Gwalior, India</strong> 🇮🇳. Building real-time dashboards, cross-platform mobile apps, and decentralized identity solutions.",
-    "Full-stack developer with hands-on experience building production applications across React, React Native, Node.js/Express, and TypeScript, including real-time dashboards, cross-platform mobile apps, and REST APIs integrated with third-party and government data sources. Comfortable owning a feature end-to-end — from state management and UI to backend services and deployment — with additional experience integrating blockchain-based identity infrastructure into full-stack products.",
+    "I'm a <strong>Full-Stack and Blockchain Developer</strong> at <strong>CDAC (Centre for Development of Advanced Computing)</strong>, specializing in Self-Sovereign Identity (SSI) systems. My work centers on building decentralized identity solutions using <strong>Hyperledger Indy</strong> and <strong>Aries Cloud Agent (ACA-Py)</strong>, aligned with W3C DID and Verifiable Credential standards.",
+    "Beyond SSI, I bring strong full-stack expertise across <strong>React, Next.js, TypeScript, and Node.js</strong>, with additional experience in <strong>Python and Kotlin/Java for Android development</strong>. I'm comfortable owning the complete development lifecycle — from designing responsive frontends and building REST/WebSocket-based backends, to containerizing and deploying applications with Docker and Linux.",
+    "I hold a <strong>Salesforce Developer certification</strong> and a <strong>Google Cybersecurity certification</strong>, and I graduated with a CGPA of <strong>7.7/10</strong> from ITM Gwalior. I enjoy solving complex technical problems, and outside of work I build creative side projects — from retro-themed web apps to experimenting with local AI tooling.",
   ],
 };
 

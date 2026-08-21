@@ -85,7 +85,7 @@ export default function Sidebar() {
                 rel="noopener noreferrer"
                 className="contact-link"
               >
-                ipodify.tech
+                {personalInfo.portfolio.replace(/^https?:\/\//, '').replace(/\/$/, '')}
               </a>
             </div>
           </li>
