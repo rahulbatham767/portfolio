@@ -1,50 +1,61 @@
-import { useState, useEffect, useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import { emailConfig } from '../constants'
+import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { emailConfig } from "../constants";
 
-const SUCCESS_MSG = 'Thank you for your message 😃'
-const ERROR_MSG   = "I didn't receive your message 😢"
+const SUCCESS_MSG = "Thank you for your message 😃";
+const ERROR_MSG = "I didn't receive your message 😢";
 
 export default function EmailForm() {
-  const formRef = useRef()
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState(null) // null | 'sending' | 'success' | 'error'
+  const formRef = useRef();
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState(null); // null | 'sending' | 'success' | 'error'
 
-  const isValid = form.name.trim() && form.email.trim() && form.message.trim()
+  useEffect(() => {
+    if (emailConfig.publicKey) {
+      emailjs.init(emailConfig.publicKey);
+    }
+  }, []);
+
+  const isValid = form.name.trim() && form.email.trim() && form.message.trim();
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setForm(prev => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!isValid) return
-    setStatus('sending')
+    e.preventDefault();
+    if (!isValid) return;
+    setStatus("sending");
 
-    emailjs.send(
-      emailConfig.serviceId,
-      emailConfig.templateId,
-      {
-        from_name:  form.name,
-        to_name:    emailConfig.receiverName,
-        from_email: form.email,
-        to_email:   emailConfig.receiverEmail,
-        message:    form.message,
-      },
-      emailConfig.publicKey
-    )
-    .then(() => {
-      setStatus('success')
-      setForm({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus(null), 4000)
-    })
-    .catch((err) => {
-      console.error('EmailJS error:', err)
-      setStatus('error')
-      setTimeout(() => setStatus(null), 5000)
-    })
-  }
+    const serviceId = emailConfig.serviceId || "service_cosxsx4";
+    const templateId = emailConfig.templateId || "template_fo2luuo";
+    const publicKey = emailConfig.publicKey || "FehavTGoX1bQo8fW_";
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: form.name,
+          to_name: emailConfig.receiverName,
+          from_email: form.email,
+          to_email: emailConfig.receiverEmail,
+          message: form.message,
+        },
+        publicKey,
+      )
+      .then(() => {
+        setStatus("success");
+        setForm({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus(null), 4000);
+      })
+      .catch((err) => {
+        console.error("EmailJS error response:", err);
+        setStatus("error");
+        setTimeout(() => setStatus(null), 5000);
+      });
+  };
 
   return (
     <section className="contact-form">
@@ -85,31 +96,29 @@ export default function EmailForm() {
         <button
           type="submit"
           className="form-btn"
-          disabled={!isValid || status === 'sending'}
+          disabled={!isValid || status === "sending"}
         >
           <ion-icon name="paper-plane"></ion-icon>
-          <span>
-            {status === 'sending' ? 'Sending…' : 'Send Message'}
-          </span>
+          <span>{status === "sending" ? "Sending…" : "Send Message"}</span>
         </button>
 
-        {status === 'success' && (
+        {status === "success" && (
           <div
             className="form-response-msg"
-            style={{ display: 'block', color: 'var(--orange-yellow-crayola)' }}
+            style={{ display: "block", color: "var(--orange-yellow-crayola)" }}
           >
             {SUCCESS_MSG}
           </div>
         )}
-        {status === 'error' && (
+        {status === "error" && (
           <div
             className="form-response-msg"
-            style={{ display: 'block', color: '#ff4c4c' }}
+            style={{ display: "block", color: "#ff4c4c" }}
           >
             {ERROR_MSG}
           </div>
         )}
       </form>
     </section>
-  )
+  );
 }
