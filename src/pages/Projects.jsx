@@ -77,7 +77,19 @@ export default function Projects() {
                   <div className="project-item-icon-box">
                     <ion-icon name={proj.isExternal ? 'globe-outline' : 'eye-outline'}></ion-icon>
                   </div>
-                  <img src={proj.image} alt={proj.title} loading="lazy" />
+                  {proj.video ? (
+                    <video
+                      src={proj.video}
+                      poster={proj.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      style={{ width: '100%', height: '200px', minHeight: '200px', maxHeight: '200px', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
+                    />
+                  ) : (
+                    <img src={proj.image} alt={proj.title} loading="lazy" />
+                  )}
                 </figure>
                 <h3 className="project-title">{proj.title}</h3>
                 <p className="project-category">{proj.tags}</p>
