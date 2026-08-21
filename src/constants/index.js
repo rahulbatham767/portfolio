@@ -1,73 +1,85 @@
 export const personalInfo = {
   name: "Rahul Batham",
-  title: "Full-Stack & Blockchain Engineer",
+  title: "Full-Stack, Blockchain & Mobile Engineer",
   location: "Gwalior, India 🇮🇳",
   email: "rahulbatham767@gmail.com",
-  phone: "+91 7999754170",
   portfolio: "https://rahul-batham-portfolio.vercel.app/",
-  linkedin: "https://linkedin.com/in/rahul-batham767",
+  linkedin: "https://linkedin.com/in/rahulbatham767",
   github: "https://github.com/rahulbatham767",
   avatar: "/images/my-avatar.png",
   status: "Open to Opportunities",
+
   stats: [
     { number: "2+", label: "Years Experience" },
-    { number: "CDAC", label: "SSI Engineer" },
-    { number: "Full-Stack", label: "Web & Mobile" },
+    { number: "CDAC", label: "SSI Engineering" },
+    { number: "Multi-Stack", label: "Web · Mobile · Blockchain" },
   ],
+
   about: [
-    "I'm a <strong>Full-Stack and Blockchain Developer</strong> at <strong>CDAC (Centre for Development of Advanced Computing)</strong>, specializing in Self-Sovereign Identity (SSI) systems. My work centers on building decentralized identity solutions using <strong>Hyperledger Indy</strong> and <strong>Aries Cloud Agent (ACA-Py)</strong>, aligned with W3C DID and Verifiable Credential standards.",
-    "Beyond SSI, I bring strong full-stack expertise across <strong>React, Next.js, TypeScript, and Node.js</strong>, with additional experience in <strong>Python and Kotlin/Java for Android development</strong>. I'm comfortable owning the complete development lifecycle — from designing responsive frontends and building REST/WebSocket-based backends, to containerizing and deploying applications with Docker and Linux.",
-    "I hold a <strong>Salesforce Developer certification</strong> and a <strong>Google Cybersecurity certification</strong>, and I graduated with a CGPA of <strong>7.7/10</strong> from ITM Gwalior. I enjoy solving complex technical problems, and outside of work I build creative side projects — from retro-themed web apps to experimenting with local AI tooling.",
+    "I'm a <strong>Software Engineer</strong> at <strong>CDAC (Centre for Development of Advanced Computing)</strong>, working across <strong>Full-Stack Development, Blockchain, Self-Sovereign Identity (SSI), and Mobile Development</strong>. My work includes decentralized identity solutions built with <strong>Hyperledger Indy</strong> and <strong>Aries Cloud Agent Python (ACA-Py)</strong>.",
+
+    "I build applications across the stack using <strong>React, Next.js, TypeScript, Node.js, and Python</strong>, and also work with <strong>React Native, Android, Kotlin, and Java</strong>. My experience spans frontend interfaces, backend APIs, real-time systems, decentralized identity workflows, databases, containers, and deployment environments.",
+
+    "I enjoy exploring different areas of software engineering and building practical projects — from <strong>SSI platforms and identity systems</strong> to <strong>mobile applications, real-time dashboards, blockchain networks, and creative web experiences</strong>."
   ],
 };
+
 
 export const services = [
   {
     icon: "/images/icon-dev.svg",
-    title: "Full-Stack Web Systems",
+    title: "Full-Stack Web Development",
     description:
-      "Building real-time dashboards, WebSockets integrations, and REST API services using React, Next.js, Node.js, Express, and TypeScript.",
+      "Building modern web applications, dashboards, and real-time experiences using React, Next.js, TypeScript, Node.js, REST APIs, and WebSockets.",
   },
   {
     icon: "/images/icon-app.svg",
-    title: "Mobile Development & Biometrics",
+    title: "Mobile & Android Development",
     description:
-      "Cross-platform mobile apps in React Native (Expo) & Android (Kotlin/Java), incorporating Aadhaar eKYC and biometric authentication.",
+      "Developing cross-platform and Android applications using React Native, Expo, Kotlin, and Java, including identity and biometric workflows.",
   },
   {
     icon: "/images/icon-design.svg",
-    title: "Decentralized Identity & Blockchain",
+    title: "Blockchain & Decentralized Identity",
     description:
-      "Hyperledger Indy, Fabric, ACA-Py, DIDComm, W3C DIDs, Verifiable Credentials, and Zero-Knowledge Proof (ZKP) predicate workflows.",
+      "Building and working with Hyperledger Indy, Fabric, ACA-Py, DIDComm, Verifiable Credentials, and Zero-Knowledge Proof workflows.",
   },
   {
     icon: "/images/icon-photo.svg",
-    title: "Backend Services & REST APIs",
+    title: "Backend & Systems Engineering",
     description:
-      "Developing robust REST APIs, microservices, and secure backend integrations using Node.js, Express, Spring Boot, and Python.",
+      "Developing backend services and integrations with Node.js, Express, Spring Boot, Python, databases, Docker, Linux, and distributed systems.",
   },
 ];
+
 
 export const highlights = [
   {
     id: 1,
     avatar: "/images/avatar-1.png",
-    title: "CDAC — SSI Engineering",
+    title: "SSI Engineering at CDAC",
     summary:
-      "Built production Self-Sovereign Identity ecosystems at CDAC using Hyperledger Indy, ACA-Py, and Docker Compose with Issuer–Holder–Verifier workflows.",
+      "Working on decentralized identity systems using Hyperledger Indy, ACA-Py, Docker, DIDComm, and Issuer–Holder–Verifier workflows.",
     description:
-      "At CDAC (Centre for Development of Advanced Computing), I designed and deployed a complete Self-Sovereign Identity (SSI) ecosystem from scratch. The system used Hyperledger Indy as the decentralized ledger, ACA-Py (Aries Cloud Agent Python) as the agent framework, and Docker Compose for multi-container orchestration.\n\nKey achievements include implementing DIDComm-based Issuer–Holder–Verifier workflows for verifiable credential issuance and verification, automating predicate-driven ZKP (Zero-Knowledge Proof) pipelines that improved onboarding efficiency by 40%, and integrating Aadhaar-based offline eKYC for identity verification.",
-    tags: ["Hyperledger Indy", "ACA-Py", "Docker", "ZKP", "DIDComm", "SSI"],
+      "At CDAC, I work on Self-Sovereign Identity (SSI) solutions built around Hyperledger Indy and Aries Cloud Agent Python (ACA-Py). My work includes decentralized identity workflows, verifiable credential issuance and verification, DIDComm communication, Zero-Knowledge Proof predicates, and Docker-based multi-agent environments.",
+    tags: [
+      "Hyperledger Indy",
+      "ACA-Py",
+      "SSI",
+      "DIDComm",
+      "ZKP",
+      "Docker",
+    ],
     date: "Oct 2024 – Present",
   },
   {
     id: 2,
     avatar: "/images/avatar-2.png",
-    title: "Real-Time Dashboards & APIs",
+    title: "Real-Time Applications",
     summary:
-      "Architected live telemetry monitoring dashboards with MERN stack & WebSockets to handle concurrent updates across multi-client connected environments.",
+      "Built real-time dashboards and applications using the MERN stack, TypeScript, and WebSocket-based communication.",
     description:
-      "Designed and built high-performance real-time monitoring dashboards using the MERN stack (MongoDB, Express, React, Node.js) with WebSocket-based bidirectional communication.\n\nThe system handled concurrent data streams from multiple clients simultaneously, maintaining smooth UI performance with React state management optimizations. Implemented efficient data diffing strategies to minimize DOM re-renders and WebSocket message throttling to prevent overload under high-frequency telemetry data ingestion.",
+      "Worked on real-time monitoring and dashboard applications using React, Node.js, Express, MongoDB, and WebSockets. The systems focused on receiving and displaying live updates across connected clients while managing frequent data changes efficiently.",
     tags: [
       "React",
       "Node.js",
@@ -81,18 +93,17 @@ export const highlights = [
   {
     id: 3,
     avatar: "/images/avatar-3.png",
-    title: "Aadhaar eKYC & Biometrics",
+    title: "Android, Biometrics & eKYC",
     summary:
-      "Developed native Android modules (Kotlin/Java) for encrypted biometric data capture (face, iris, fingerprint) aligned with UIDAI specs.",
+      "Developed Android components for biometric and identity-related workflows using Kotlin, Java, Aadhaar offline eKYC, and backend services.",
     description:
-      "Built native Android modules for secure biometric data capture fully compliant with UIDAI (Unique Identification Authority of India) specifications. The modules support multi-modal biometric capture including face, iris, and fingerprint recognition.\n\nImplemented end-to-end encryption for biometric data at rest and in transit, integrated with Aadhaar offline eKYC XML verification, and designed the system to work in offline-capable mode with local validation fallbacks. The solution was integrated into a Spring Boot backend for server-side KYC processing.",
+      "Worked on Android-based identity solutions involving biometric workflows, encrypted data handling, and Aadhaar offline eKYC processing. The work involved Kotlin and Java development along with integration between mobile applications and backend services.",
     tags: [
       "Kotlin",
       "Java",
       "Android",
       "Biometrics",
-      "UIDAI",
-      "eKYC",
+      "Aadhaar eKYC",
       "Spring Boot",
     ],
     date: "2024",
@@ -100,23 +111,24 @@ export const highlights = [
   {
     id: 4,
     avatar: "/images/avatar-4.png",
-    title: "REST APIs & Microservices",
+    title: "Backend & Infrastructure",
     summary:
-      "Designed robust REST APIs and scalable microservice architectures with Express, Node.js, Spring Boot, and Docker containers.",
+      "Built backend services and worked with REST APIs, microservices, databases, Docker, Linux, and application integrations.",
     description:
-      "Architected and implemented production-grade REST API systems and microservice architectures serving enterprise-scale workloads. Designed API gateways with rate limiting, JWT-based authentication, and request validation pipelines.\n\nMicroservices were containerized with Docker and orchestrated for high availability. Integrated with third-party government APIs, implemented comprehensive error handling, logging, and monitoring. Used both PostgreSQL and MongoDB depending on data access patterns, with Redis for caching high-frequency lookup data.",
+      "Developed backend services using Node.js, Express, Spring Boot, and Python. Worked with REST APIs, authentication and validation workflows, PostgreSQL and MongoDB databases, Docker containers, Redis caching, and Linux-based development environments.",
     tags: [
       "Node.js",
       "Express",
       "Spring Boot",
+      "Python",
       "Docker",
       "PostgreSQL",
       "Redis",
-      "JWT",
     ],
-    date: "2023 – 2024",
+    date: "2023 – Present",
   },
 ];
+
 
 export const experience = [
   {
@@ -125,14 +137,15 @@ export const experience = [
     period: "Oct 2024 — Present",
     location: "India",
     bullets: [
-      "Architected and deployed enterprise-grade Self-Sovereign Identity ecosystems using Hyperledger Indy and Aries Cloud Agent Python (ACA-Py).",
-      "Designed automated predicate-driven Zero-Knowledge Proof (ZKP) decision verification pipelines, boosting credential onboarding efficiency by 40%.",
-      "Engineered real-time telemetry monitoring dashboards using MERN stack (MongoDB, Express, React, Node.js) and WebSockets.",
-      "Developed native Android security modules (Kotlin/Java) with encrypted multi-modal biometric authentication (iris, face, fingerprint) & UIDAI Aadhaar eKYC integration.",
-      "Orchestrated containerized multi-agent distributed networks with Docker Compose, automated ledger synchronization, and Linux system services.",
+      "Working on Self-Sovereign Identity (SSI) solutions using Hyperledger Indy and Aries Cloud Agent Python (ACA-Py).",
+      "Developing decentralized credential issuance and verification workflows involving DIDComm and Zero-Knowledge Proof predicates.",
+      "Building and working with real-time monitoring dashboards using React, Node.js, MongoDB, Express, and WebSockets.",
+      "Developing Android modules using Kotlin and Java for biometric and Aadhaar offline eKYC-related workflows.",
+      "Working with Docker, Linux, multi-container environments, and distributed agent infrastructure for application deployment and development.",
     ],
   },
 ];
+
 
 export const education = [
   {
@@ -144,6 +157,7 @@ export const education = [
   },
 ];
 
+
 export const certifications = [
   {
     name: "Google Cybersecurity Certificate",
@@ -151,67 +165,122 @@ export const certifications = [
     date: "Feb 2025",
     id: "96RXHXDOS6AC",
     badge: "Cybersecurity & Defense",
-    verifyUrl: "https://www.coursera.org/account/accomplishments/verify/96RXHXDOS6AC",
+    verifyUrl:
+      "https://www.coursera.org/account/accomplishments/verify/96RXHXDOS6AC",
   },
   {
     name: "Salesforce Developer Certification — 3 Super Badges",
     issuer: "Salesforce",
     id: "SISFVIPAD2023-75406",
     badge: "Salesforce Developer",
-    verifyUrl: "https://trailhead.salesforce.com/en/credentials/certification-verification-detail/?cId=SISFVIPAD2023-75406",
+    verifyUrl:
+      "https://trailhead.salesforce.com/en/credentials/certification-verification-detail/?cId=SISFVIPAD2023-75406",
   },
 ];
 
+
 export const skills = [
   {
-    label: "Frontend (React, React Native Expo, Next.js, TypeScript)",
-    percent: 95,
-  },
-  {
-    label: "Backend (Node.js, Express, Spring Boot, REST APIs, WebSockets)",
-    percent: 92,
-  },
-  {
-    label: "Blockchain & SSI (Hyperledger Indy, Fabric, ACA-Py, DIDComm, ZKPs)",
+    label: "Frontend & Web Development",
     percent: 90,
   },
   {
-    label: "Mobile & Security (Android Kotlin/Java, Biometrics, UIDAI eKYC)",
+    label: "Backend & APIs",
     percent: 88,
   },
   {
-    label: "DevOps & Cloud (Docker, Kubernetes, Git, MongoDB, PostgreSQL, Nginx)",
+    label: "Blockchain & Decentralized Identity",
+    percent: 88,
+  },
+  {
+    label: "Mobile & Android Development",
     percent: 85,
   },
+  {
+    label: "DevOps, Databases & Systems",
+    percent: 82,
+  },
 ];
+
 
 export const skillCategories = [
   {
     title: "Frontend Engineering",
     icon: "code-slash-outline",
-    skills: ["React.js", "Next.js", "React Native (Expo)", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 / Modern CSS", "Zustand & Redux"],
+    skills: [
+      "React.js",
+      "Next.js",
+      "React Native (Expo)",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "HTML5 / Modern CSS",
+      "Zustand",
+      "Redux",
+    ],
   },
   {
-    title: "Backend & Systems",
+    title: "Backend & APIs",
     icon: "server-outline",
-    skills: ["Node.js", "Express.js", "Spring Boot", "Python", "REST APIs", "WebSockets", "Microservices", "JWT & OAuth2"],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "Python",
+      "REST APIs",
+      "WebSockets",
+      "Microservices",
+      "JWT",
+      "OAuth2",
+    ],
   },
   {
     title: "Blockchain & Decentralized Identity",
     icon: "shield-checkmark-outline",
-    skills: ["Hyperledger Indy", "Hyperledger Fabric", "ACA-Py (Aries Agent)", "DIDComm Protocols", "W3C DIDs & VCs", "ZKP Predicates", "Smart Contracts"],
+    skills: [
+      "Hyperledger Indy",
+      "Hyperledger Fabric",
+      "ACA-Py",
+      "DIDComm",
+      "W3C DIDs",
+      "Verifiable Credentials",
+      "ZKP Predicates",
+      "Smart Contracts",
+    ],
   },
   {
-    title: "Mobile & Biometrics Security",
+    title: "Mobile & Security",
     icon: "phone-portrait-outline",
-    skills: ["Android (Kotlin / Java)", "UIDAI Aadhaar eKYC", "Iris & Fingerprint Biometrics", "Data Encryption (AES/RSA)", "Secure Key Storage"],
+    skills: [
+      "React Native",
+      "Expo",
+      "Android",
+      "Kotlin",
+      "Java",
+      "Aadhaar Offline eKYC",
+      "Biometric Workflows",
+      "Data Encryption",
+      "Secure Key Storage",
+    ],
   },
   {
     title: "DevOps & Databases",
     icon: "cloud-done-outline",
-    skills: ["Docker & Docker Compose", "Kubernetes", "Git & GitHub", "PostgreSQL", "MongoDB", "Redis", "Linux / Bash", "Nginx"],
+    skills: [
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Git",
+      "GitHub",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Linux / Bash",
+      "Nginx",
+    ],
   },
 ];
+
 
 export const projects = [
   {
@@ -220,11 +289,13 @@ export const projects = [
     category: "applications",
     image: "/images/project-1.jpg",
     video: "/Saboot.mp4",
-    tags: "React Native · Expo · Redux Toolkit · NativeWind · Cryptographic Hash",
+    tags:
+      "React Native · Expo · Redux Toolkit · NativeWind · Cryptographic Hash",
     link: "#",
     github: "https://github.com/rahulbatham767",
     isExternal: false,
-    summary: "Tamper-proof digital evidence capture, chaining, and verification mobile app ensuring cryptographic chain of custody."
+    summary:
+      "Mobile application for digital evidence capture, integrity verification, and maintaining a cryptographic chain of custody.",
   },
   {
     id: 2,
@@ -232,22 +303,26 @@ export const projects = [
     category: "applications",
     image: "/images/project-2.png",
     video: "/adhaar_auth.mp4",
-    tags: "Kotlin · Java · Spring Boot · Android · Biometrics · UIDAI",
+    tags:
+      "Kotlin · Java · Spring Boot · Android · Biometrics · UIDAI",
     link: "#",
     github: "https://github.com/rahulbatham767",
     isExternal: false,
-    summary: "Secure native Android module for encrypted multi-modal biometric verification and offline XML eKYC processing."
+    summary:
+      "Android-based identity verification solution combining biometric workflows with encrypted data handling and offline Aadhaar eKYC processing.",
   },
   {
     id: 3,
     title: "Self-Sovereign Identity (SSI) Platform",
     category: "blockchain & ssi",
     image: "/images/project-3.jpg",
-    tags: "Hyperledger Indy · ACA-Py · React · Zustand · Python · Docker",
+    tags:
+      "Hyperledger Indy · ACA-Py · React · Zustand · Python · Docker",
     link: "#",
     github: "https://github.com/rahulbatham767",
     isExternal: false,
-    summary: "Production-ready decentralized identity platform managing Issuer-Holder-Verifier workflows with Zero-Knowledge Proof validation."
+    summary:
+      "Decentralized identity platform for managing Issuer–Holder–Verifier workflows, credential exchange, and proof verification.",
   },
   {
     id: 4,
@@ -259,20 +334,24 @@ export const projects = [
     link: "https://ipodify.tech",
     github: "https://github.com/rahulbatham767",
     isExternal: true,
-    summary: "Nostalgic retro web audio player featuring realistic iPod click-wheel tactile interactions and YouTube audio streaming."
+    summary:
+      "Retro-inspired web music player with iPod-style click-wheel interactions, playlist support, and YouTube audio playback.",
   },
   {
     id: 5,
     title: "Hyperledger Fabric Enterprise Network",
     category: "blockchain & ssi",
     image: "/images/project-6.png",
-    tags: "Hyperledger Fabric · Docker · CA Setup · Smart Contracts",
+    tags:
+      "Hyperledger Fabric · Docker · CA Setup · Smart Contracts",
     link: "#",
     github: "https://github.com/rahulbatham767",
     isExternal: false,
-    summary: "Permissioned multi-node enterprise blockchain infrastructure with custom Certificate Authorities, raft consensus, and chaincode."
+    summary:
+      "Permissioned Hyperledger Fabric network with Certificate Authorities, Raft ordering, multi-node infrastructure, and smart contract support.",
   },
 ];
+
 
 export const filterCategories = [
   "All",
@@ -281,6 +360,7 @@ export const filterCategories = [
   "Blockchain & SSI",
 ];
 
+
 export const blogPosts = [
   {
     id: 1,
@@ -288,9 +368,9 @@ export const blogPosts = [
     category: "Blockchain & SSI",
     date: "2026-03-15",
     dateDisplay: "Mar 15, 2026",
-    title: "Building Production SSI Solutions with Hyperledger Indy & ACA-Py",
+    title: "Building SSI Solutions with Hyperledger Indy & ACA-Py",
     excerpt:
-      "A comprehensive guide to issuing and verifying credentials using Aries Cloud Agent Python and Indy ledgers.",
+      "An overview of decentralized identity, credential workflows, and verification using Aries Cloud Agent Python and Indy.",
     link: "#",
   },
   {
@@ -301,7 +381,7 @@ export const blogPosts = [
     dateDisplay: "Feb 20, 2026",
     title: "Real-Time Dashboards with MERN & WebSockets",
     excerpt:
-      "Patterns for managing high-frequency live data streams and concurrent client updates.",
+      "Approaches for building applications that receive and display frequent live updates across connected clients.",
     link: "#",
   },
   {
@@ -310,9 +390,9 @@ export const blogPosts = [
     category: "Mobile Engineering",
     date: "2026-01-10",
     dateDisplay: "Jan 10, 2026",
-    title: "Developing Native Android Biometric KYC Modules with UIDAI",
+    title: "Android Biometric Workflows & Offline eKYC",
     excerpt:
-      "Biometric capture (iris, face, fingerprint) and Aadhaar eKYC integration using Kotlin and Java.",
+      "Exploring Android development, biometric workflows, and Aadhaar offline eKYC integration using Kotlin and Java.",
     link: "#",
   },
   {
@@ -321,12 +401,13 @@ export const blogPosts = [
     category: "Backend Engineering",
     date: "2025-11-28",
     dateDisplay: "Nov 28, 2025",
-    title: "Designing Scalable REST API Gateways for Identity Systems",
+    title: "Designing REST APIs for Identity Systems",
     excerpt:
-      "Best practices for rate limiting, validation pipelines, data encryption, and robust microservices architecture.",
+      "Practical considerations for authentication, validation, encryption, backend integrations, and service architecture.",
     link: "#",
   },
 ];
+
 
 export const emailConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,

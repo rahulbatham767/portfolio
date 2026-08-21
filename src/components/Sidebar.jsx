@@ -74,32 +74,34 @@ export default function Sidebar() {
             </div>
           </li>
 
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-            <div className="contact-info">
-              <div className="contact-header-row">
-                <p className="contact-title">Phone</p>
-                <button
-                  type="button"
-                  className="copy-btn"
-                  onClick={() => handleCopy(personalInfo.phone, 'phone')}
-                  title="Copy phone number"
-                  aria-label="Copy phone"
-                >
-                  <ion-icon name={copiedKey === 'phone' ? "checkmark-outline" : "copy-outline"}></ion-icon>
-                  {copiedKey === 'phone' && <span className="copy-tooltip">Copied!</span>}
-                </button>
+          {personalInfo.phone && (
+            <li className="contact-item">
+              <div className="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
               </div>
-              <a
-                href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
-                className="contact-link"
-              >
-                {personalInfo.phone}
-              </a>
-            </div>
-          </li>
+              <div className="contact-info">
+                <div className="contact-header-row">
+                  <p className="contact-title">Phone</p>
+                  <button
+                    type="button"
+                    className="copy-btn"
+                    onClick={() => handleCopy(personalInfo.phone, 'phone')}
+                    title="Copy phone number"
+                    aria-label="Copy phone"
+                  >
+                    <ion-icon name={copiedKey === 'phone' ? "checkmark-outline" : "copy-outline"}></ion-icon>
+                    {copiedKey === 'phone' && <span className="copy-tooltip">Copied!</span>}
+                  </button>
+                </div>
+                <a
+                  href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
+                  className="contact-link"
+                >
+                  {personalInfo.phone}
+                </a>
+              </div>
+            </li>
+          )}
 
           <li className="contact-item">
             <div className="icon-box">
