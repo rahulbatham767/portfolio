@@ -1,4 +1,4 @@
-﻿/*-----------------------------------*\
+/*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
 
@@ -529,6 +529,9 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-item::before {
@@ -1393,18 +1396,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-item {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
     padding: 30px;
+    height: 100%;
   }
 
   .service-icon-box {
     margin-bottom: 0;
     margin-top: 5px;
+    flex-shrink: 0;
   }
 
-  .service-content-box { text-align: left; }
+  .service-content-box {
+    text-align: left;
+    flex: 1;
+  }
 
   /* testimonials */
 

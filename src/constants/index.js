@@ -168,7 +168,7 @@ export const skills = [
     percent: 88,
   },
   {
-    label: "DevOps & Cloud (Docker, Git, MongoDB, PostgreSQL, Nginx)",
+    label: "DevOps & Cloud (Docker, Kubernetes, Git, MongoDB, PostgreSQL, Nginx)",
     percent: 85,
   },
 ];
@@ -199,7 +199,7 @@ export const projects = [
     title: "Self-Sovereign Identity (SSI) Platform",
     category: "blockchain & ssi",
     image: "/images/project-3.jpg",
-    tags: "ACA-Py · React · Zustand · Python · Node.js",
+    tags: "Hyperledger Indy · ACA-Py · React · Zustand · Python",
     link: "#",
     isExternal: false,
   },
@@ -207,7 +207,8 @@ export const projects = [
     id: 4,
     title: "iPodify — Retro YouTube Player",
     category: "web development",
-    image: "/images/project-5.png",
+    image: "/ipodify/device_play.png",
+    video: "/ipodify/ipodify.mp4",
     tags: "React · Vite · CSS",
     link: "https://ipodify.tech",
     isExternal: true,

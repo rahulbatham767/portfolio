@@ -22,9 +22,9 @@ function useReveal() {
   return ref
 }
 
-function RevealSection({ children, className = '' }) {
+function RevealSection({ children, className = '', as: Component = 'div', ...props }) {
   const ref = useReveal()
-  return <div ref={ref} className={`reveal ${className}`}>{children}</div>
+  return <Component ref={ref} className={`reveal ${className}`} {...props}>{children}</Component>
 }
 
 function useHorizontalWheelScroll() {
@@ -75,16 +75,14 @@ export default function About() {
         <h3 className="h3 service-title">What I'm doing</h3>
         <ul className="service-list">
           {services.map((svc, i) => (
-            <RevealSection key={i}>
-              <li className="service-item">
-                <div className="service-icon-box">
-                  <img src={svc.icon} alt={svc.title} width="40" />
-                </div>
-                <div className="service-content-box">
-                  <h4 className="h4 service-item-title">{svc.title}</h4>
-                  <p className="service-item-text">{svc.description}</p>
-                </div>
-              </li>
+            <RevealSection as="li" key={i} className="service-item">
+              <div className="service-icon-box">
+                <img src={svc.icon} alt={svc.title} width="40" />
+              </div>
+              <div className="service-content-box">
+                <h4 className="h4 service-item-title">{svc.title}</h4>
+                <p className="service-item-text">{svc.description}</p>
+              </div>
             </RevealSection>
           ))}
         </ul>

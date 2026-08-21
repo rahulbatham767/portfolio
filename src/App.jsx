@@ -7,19 +7,19 @@ import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
-const PAGES = ['about', 'resume', 'projects', 'blog', 'contact']
+const PAGES = ['about', 'resume', 'projects', /* 'blog', */ 'contact']
 
 export default function App() {
   const [activePage, setActivePage] = useState('about')
 
   const renderPage = () => {
     switch (activePage) {
-      case 'about':   return <About />
-      case 'resume':  return <Resume />
+      case 'about': return <About />
+      case 'resume': return <Resume />
       case 'projects': return <Projects />
-      case 'blog':    return <Blog />
+      // case 'blog':    return <Blog />
       case 'contact': return <Contact />
-      default:        return <About />
+      default: return <About />
     }
   }
 

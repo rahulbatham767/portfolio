@@ -3,7 +3,7 @@ export default function Navbar({ activePage, setActivePage, pages }) {
     about: 'About',
     resume: 'Resume',
     projects: 'Projects',
-    blog: 'Blog',
+    // blog: 'Blog',
     contact: 'Contact',
   }
 
