@@ -3,6 +3,15 @@ import { personalInfo } from "../constants";
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
+  const [copiedKey, setCopiedKey] = useState(null);
+
+  const handleCopy = (text, key) => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      setCopiedKey(key);
+      setTimeout(() => setCopiedKey(null), 2000);
+    }
+  };
 
   return (
     <aside className={`sidebar${expanded ? " active" : ""}`} data-sidebar>
@@ -16,6 +25,11 @@ export default function Sidebar() {
             {personalInfo.name}
           </h1>
           <p className="title">{personalInfo.title}</p>
+
+          <div className="status-badge">
+            <span className="status-dot"></span>
+            <span className="status-text">{personalInfo.status}</span>
+          </div>
         </div>
 
         <button
@@ -37,7 +51,19 @@ export default function Sidebar() {
               <ion-icon name="mail-outline"></ion-icon>
             </div>
             <div className="contact-info">
-              <p className="contact-title">Email</p>
+              <div className="contact-header-row">
+                <p className="contact-title">Email</p>
+                <button
+                  type="button"
+                  className="copy-btn"
+                  onClick={() => handleCopy(personalInfo.email, 'email')}
+                  title="Copy email address"
+                  aria-label="Copy email"
+                >
+                  <ion-icon name={copiedKey === 'email' ? "checkmark-outline" : "copy-outline"}></ion-icon>
+                  {copiedKey === 'email' && <span className="copy-tooltip">Copied!</span>}
+                </button>
+              </div>
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="contact-link"
@@ -53,7 +79,19 @@ export default function Sidebar() {
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
             <div className="contact-info">
-              <p className="contact-title">Phone</p>
+              <div className="contact-header-row">
+                <p className="contact-title">Phone</p>
+                <button
+                  type="button"
+                  className="copy-btn"
+                  onClick={() => handleCopy(personalInfo.phone, 'phone')}
+                  title="Copy phone number"
+                  aria-label="Copy phone"
+                >
+                  <ion-icon name={copiedKey === 'phone' ? "checkmark-outline" : "copy-outline"}></ion-icon>
+                  {copiedKey === 'phone' && <span className="copy-tooltip">Copied!</span>}
+                </button>
+              </div>
               <a
                 href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
                 className="contact-link"
@@ -84,6 +122,7 @@ export default function Sidebar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-link"
+                title={personalInfo.portfolio}
               >
                 {personalInfo.portfolio.replace(/^https?:\/\//, '').replace(/\/$/, '')}
               </a>
@@ -100,7 +139,8 @@ export default function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              title="LinkedIn"
+              title="LinkedIn Profile"
+              aria-label="LinkedIn"
             >
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
@@ -111,7 +151,8 @@ export default function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
-              title="GitHub"
+              title="GitHub Profile"
+              aria-label="GitHub"
             >
               <ion-icon name="logo-github"></ion-icon>
             </a>

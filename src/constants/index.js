@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Rahul Batham",
-  title: "Full-Stack Developer",
+  title: "Full-Stack & Blockchain Engineer",
   location: "Gwalior, India 🇮🇳",
   email: "rahulbatham767@gmail.com",
   phone: "+91 7999754170",
@@ -8,6 +8,12 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/rahul-batham767",
   github: "https://github.com/rahulbatham767",
   avatar: "/images/my-avatar.png",
+  status: "Open to Opportunities",
+  stats: [
+    { number: "2+", label: "Years Experience" },
+    { number: "CDAC", label: "SSI Engineer" },
+    { number: "Full-Stack", label: "Web & Mobile" },
+  ],
   about: [
     "I'm a <strong>Full-Stack and Blockchain Developer</strong> at <strong>CDAC (Centre for Development of Advanced Computing)</strong>, specializing in Self-Sovereign Identity (SSI) systems. My work centers on building decentralized identity solutions using <strong>Hyperledger Indy</strong> and <strong>Aries Cloud Agent (ACA-Py)</strong>, aligned with W3C DID and Verifiable Credential standards.",
     "Beyond SSI, I bring strong full-stack expertise across <strong>React, Next.js, TypeScript, and Node.js</strong>, with additional experience in <strong>Python and Kotlin/Java for Android development</strong>. I'm comfortable owning the complete development lifecycle — from designing responsive frontends and building REST/WebSocket-based backends, to containerizing and deploying applications with Docker and Linux.",
@@ -117,12 +123,13 @@ export const experience = [
     role: "Blockchain & Android Developer — SSI Engineering",
     company: "CDAC (Centre for Development of Advanced Computing)",
     period: "Oct 2024 — Present",
+    location: "India",
     bullets: [
-      "Built real-time monitoring dashboards using MERN stack and WebSockets to visualize live data streams and system events.",
-      "Developed native Android modules for secure data capture and verification with government (UIDAI) APIs & iris/fingerprint biometric authentication.",
-      "Architected a production-grade Self-Sovereign Identity ecosystem using Hyperledger Indy and ACA-Py (Issuer–Holder–Verifier workflows).",
-      "Designed automated predicate-driven ZKP decision pipelines for credential validation & onboarding, improving system efficiency by 40%.",
-      "Orchestrated multi-agent containerized SSI infrastructure using Docker Compose & integrated Aadhaar-based offline eKYC.",
+      "Architected and deployed enterprise-grade Self-Sovereign Identity ecosystems using Hyperledger Indy and Aries Cloud Agent Python (ACA-Py).",
+      "Designed automated predicate-driven Zero-Knowledge Proof (ZKP) decision verification pipelines, boosting credential onboarding efficiency by 40%.",
+      "Engineered real-time telemetry monitoring dashboards using MERN stack (MongoDB, Express, React, Node.js) and WebSockets.",
+      "Developed native Android security modules (Kotlin/Java) with encrypted multi-modal biometric authentication (iris, face, fingerprint) & UIDAI Aadhaar eKYC integration.",
+      "Orchestrated containerized multi-agent distributed networks with Docker Compose, automated ledger synchronization, and Linux system services.",
     ],
   },
 ];
@@ -143,11 +150,15 @@ export const certifications = [
     issuer: "Google",
     date: "Feb 2025",
     id: "96RXHXDOS6AC",
+    badge: "Cybersecurity & Defense",
+    verifyUrl: "https://www.coursera.org/account/accomplishments/verify/96RXHXDOS6AC",
   },
   {
     name: "Salesforce Developer Certification — 3 Super Badges",
     issuer: "Salesforce",
     id: "SISFVIPAD2023-75406",
+    badge: "Salesforce Developer",
+    verifyUrl: "https://trailhead.salesforce.com/en/credentials/certification-verification-detail/?cId=SISFVIPAD2023-75406",
   },
 ];
 
@@ -174,6 +185,34 @@ export const skills = [
   },
 ];
 
+export const skillCategories = [
+  {
+    title: "Frontend Engineering",
+    icon: "code-slash-outline",
+    skills: ["React.js", "Next.js", "React Native (Expo)", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 / Modern CSS", "Zustand & Redux"],
+  },
+  {
+    title: "Backend & Systems",
+    icon: "server-outline",
+    skills: ["Node.js", "Express.js", "Spring Boot", "Python", "REST APIs", "WebSockets", "Microservices", "JWT & OAuth2"],
+  },
+  {
+    title: "Blockchain & Decentralized Identity",
+    icon: "shield-checkmark-outline",
+    skills: ["Hyperledger Indy", "Hyperledger Fabric", "ACA-Py (Aries Agent)", "DIDComm Protocols", "W3C DIDs & VCs", "ZKP Predicates", "Smart Contracts"],
+  },
+  {
+    title: "Mobile & Biometrics Security",
+    icon: "phone-portrait-outline",
+    skills: ["Android (Kotlin / Java)", "UIDAI Aadhaar eKYC", "Iris & Fingerprint Biometrics", "Data Encryption (AES/RSA)", "Secure Key Storage"],
+  },
+  {
+    title: "DevOps & Databases",
+    icon: "cloud-done-outline",
+    skills: ["Docker & Docker Compose", "Kubernetes", "Git & GitHub", "PostgreSQL", "MongoDB", "Redis", "Linux / Bash", "Nginx"],
+  },
+];
+
 export const projects = [
   {
     id: 1,
@@ -181,9 +220,11 @@ export const projects = [
     category: "applications",
     image: "/images/project-1.jpg",
     video: "/Saboot.mp4",
-    tags: "React Native · Expo · Redux Toolkit · NativeWind",
+    tags: "React Native · Expo · Redux Toolkit · NativeWind · Cryptographic Hash",
     link: "#",
+    github: "https://github.com/rahulbatham767",
     isExternal: false,
+    summary: "Tamper-proof digital evidence capture, chaining, and verification mobile app ensuring cryptographic chain of custody."
   },
   {
     id: 2,
@@ -191,18 +232,22 @@ export const projects = [
     category: "applications",
     image: "/images/project-2.png",
     video: "/adhaar_auth.mp4",
-    tags: "Kotlin · Java · Spring Boot · Android · Biometrics",
+    tags: "Kotlin · Java · Spring Boot · Android · Biometrics · UIDAI",
     link: "#",
+    github: "https://github.com/rahulbatham767",
     isExternal: false,
+    summary: "Secure native Android module for encrypted multi-modal biometric verification and offline XML eKYC processing."
   },
   {
     id: 3,
     title: "Self-Sovereign Identity (SSI) Platform",
     category: "blockchain & ssi",
     image: "/images/project-3.jpg",
-    tags: "Hyperledger Indy · ACA-Py · React · Zustand · Python",
+    tags: "Hyperledger Indy · ACA-Py · React · Zustand · Python · Docker",
     link: "#",
+    github: "https://github.com/rahulbatham767",
     isExternal: false,
+    summary: "Production-ready decentralized identity platform managing Issuer-Holder-Verifier workflows with Zero-Knowledge Proof validation."
   },
   {
     id: 4,
@@ -210,18 +255,22 @@ export const projects = [
     category: "web development",
     image: "/ipodify/device_play.png",
     video: "/ipodify/ipodify.mp4",
-    tags: "React · Vite · CSS",
+    tags: "React · Vite · CSS · YouTube API · Audio Engine",
     link: "https://ipodify.tech",
+    github: "https://github.com/rahulbatham767",
     isExternal: true,
+    summary: "Nostalgic retro web audio player featuring realistic iPod click-wheel tactile interactions and YouTube audio streaming."
   },
   {
     id: 5,
     title: "Hyperledger Fabric Enterprise Network",
     category: "blockchain & ssi",
     image: "/images/project-6.png",
-    tags: "Hyperledger Fabric · Docker · CA Setup",
+    tags: "Hyperledger Fabric · Docker · CA Setup · Smart Contracts",
     link: "#",
+    github: "https://github.com/rahulbatham767",
     isExternal: false,
+    summary: "Permissioned multi-node enterprise blockchain infrastructure with custom Certificate Authorities, raft consensus, and chaincode."
   },
 ];
 

@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { emailConfig } from "../constants";
 
-const SUCCESS_MSG = "Thank you for your message 😃";
-const ERROR_MSG = "I didn't receive your message 😢";
+const SUCCESS_MSG = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
+const ERROR_MSG = "Unable to send message right now. Please email me directly at rahulbatham767@gmail.com.";
 
 export default function EmailForm() {
   const formRef = useRef();
@@ -48,18 +48,18 @@ export default function EmailForm() {
       .then(() => {
         setStatus("success");
         setForm({ name: "", email: "", message: "" });
-        setTimeout(() => setStatus(null), 4000);
+        setTimeout(() => setStatus(null), 5000);
       })
       .catch((err) => {
         console.error("EmailJS error response:", err);
         setStatus("error");
-        setTimeout(() => setStatus(null), 5000);
+        setTimeout(() => setStatus(null), 6000);
       });
   };
 
   return (
     <section className="contact-form">
-      <h3 className="h3 form-title">Contact Form</h3>
+      <h3 className="h3 form-title">Send a Direct Message</h3>
 
       <form ref={formRef} onSubmit={handleSubmit} className="form" noValidate>
         <div className="input-wrapper">
@@ -67,7 +67,7 @@ export default function EmailForm() {
             type="text"
             name="name"
             className="form-input"
-            placeholder="Your Name"
+            placeholder="Your Full Name *"
             required
             value={form.name}
             onChange={handleChange}
@@ -76,7 +76,7 @@ export default function EmailForm() {
             type="email"
             name="email"
             className="form-input"
-            placeholder="Your Email"
+            placeholder="Your Email Address *"
             required
             value={form.email}
             onChange={handleChange}
@@ -86,8 +86,8 @@ export default function EmailForm() {
         <textarea
           name="message"
           className="form-input"
-          placeholder="Write your thoughts here..."
-          rows={4}
+          placeholder="Tell me about your project, team, or opportunity... *"
+          rows={5}
           required
           value={form.message}
           onChange={handleChange}
@@ -98,24 +98,20 @@ export default function EmailForm() {
           className="form-btn"
           disabled={!isValid || status === "sending"}
         >
-          <ion-icon name="paper-plane"></ion-icon>
-          <span>{status === "sending" ? "Sending…" : "Send Message"}</span>
+          <ion-icon name={status === "sending" ? "sync-outline" : "paper-plane"} className={status === "sending" ? "spin-icon" : ""}></ion-icon>
+          <span>{status === "sending" ? "Transmitting…" : "Send Message"}</span>
         </button>
 
         {status === "success" && (
-          <div
-            className="form-response-msg"
-            style={{ display: "block", color: "var(--orange-yellow-crayola)" }}
-          >
-            {SUCCESS_MSG}
+          <div className="form-alert-box success">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <span>{SUCCESS_MSG}</span>
           </div>
         )}
         {status === "error" && (
-          <div
-            className="form-response-msg"
-            style={{ display: "block", color: "#ff4c4c" }}
-          >
-            {ERROR_MSG}
+          <div className="form-alert-box error">
+            <ion-icon name="alert-circle-outline"></ion-icon>
+            <span>{ERROR_MSG}</span>
           </div>
         )}
       </form>

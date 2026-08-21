@@ -70,6 +70,20 @@ export default function About() {
         ))}
       </section>
 
+      {/* Key Impact Stats */}
+      {personalInfo.stats && (
+        <section className="about-stats-container">
+          <div className="about-stats-grid">
+            {personalInfo.stats.map((stat, i) => (
+              <div key={i} className="about-stat-card">
+                <div className="stat-number">{stat.number}</div>
+                <div className="stat-label">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Services */}
       <section className="service">
         <h3 className="h3 service-title">What I'm doing</h3>

@@ -68,32 +68,84 @@ export default function Projects() {
               data-filter-item
               data-category={proj.category}
             >
-              <a
-                href={proj.link}
-                target={proj.isExternal ? '_blank' : '_self'}
-                rel={proj.isExternal ? 'noopener noreferrer' : undefined}
-              >
-                <figure className="project-img">
-                  <div className="project-item-icon-box">
-                    <ion-icon name={proj.isExternal ? 'globe-outline' : 'eye-outline'}></ion-icon>
+              <div className="project-card-wrapper">
+                <a
+                  href={proj.link}
+                  target={proj.isExternal ? '_blank' : '_self'}
+                  rel={proj.isExternal ? 'noopener noreferrer' : undefined}
+                  className="project-img-link"
+                >
+                  <figure className="project-img">
+                    <div className="project-item-icon-box">
+                      <ion-icon name={proj.isExternal ? 'open-outline' : 'eye-outline'}></ion-icon>
+                    </div>
+                    {proj.video ? (
+                      <video
+                        src={proj.video}
+                        poster={proj.image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ width: '100%', height: '210px', minHeight: '210px', maxHeight: '210px', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
+                      />
+                    ) : (
+                      <img src={proj.image} alt={proj.title} loading="lazy" style={{ width: '100%', height: '210px', objectFit: 'cover', borderRadius: '16px' }} />
+                    )}
+                  </figure>
+                </a>
+
+                <div className="project-card-content">
+                  <div className="project-header-row">
+                    <h3 className="project-title">
+                      <a
+                        href={proj.link}
+                        target={proj.isExternal ? '_blank' : '_self'}
+                        rel={proj.isExternal ? 'noopener noreferrer' : undefined}
+                      >
+                        {proj.title}
+                      </a>
+                    </h3>
                   </div>
-                  {proj.video ? (
-                    <video
-                      src={proj.video}
-                      poster={proj.image}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      style={{ width: '100%', height: '200px', minHeight: '200px', maxHeight: '200px', objectFit: 'cover', borderRadius: '16px', display: 'block' }}
-                    />
-                  ) : (
-                    <img src={proj.image} alt={proj.title} loading="lazy" />
+
+                  {proj.summary && (
+                    <p className="project-summary-text">{proj.summary}</p>
                   )}
-                </figure>
-                <h3 className="project-title">{proj.title}</h3>
-                <p className="project-category">{proj.tags}</p>
-              </a>
+
+                  <div className="project-tags-list">
+                    {proj.tags.split(' · ').map((tag, idx) => (
+                      <span key={idx} className="project-tag-pill">{tag}</span>
+                    ))}
+                  </div>
+
+                  <div className="project-actions-row">
+                    {proj.isExternal && (
+                      <a
+                        href={proj.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-action-btn primary"
+                        title="Live Demo"
+                      >
+                        <ion-icon name="globe-outline"></ion-icon>
+                        <span>Live Demo</span>
+                      </a>
+                    )}
+                    {proj.github && (
+                      <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-action-btn secondary"
+                        title="View Source on GitHub"
+                      >
+                        <ion-icon name="logo-github"></ion-icon>
+                        <span>Source</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </li>
           ))}
         </ul>

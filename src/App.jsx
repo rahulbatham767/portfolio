@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import About from './pages/About'
 import Resume from './pages/Resume'
 import Projects from './pages/Projects'
-import Blog from './pages/Blog'
+// import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
 const PAGES = ['about', 'resume', 'projects', /* 'blog', */ 'contact']
